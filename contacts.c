@@ -26,11 +26,12 @@ void clearBuffer();
 void displayContact(Contact contact);
 void freeContacts();
 
-Contact Repertoire[MAX_CONTACTS];
+Contact *Repertoire;
 int tracker=0;
 
 int main(){
     int choice;
+    Repertoire = (Contact *)malloc(MAX_CONTACTS * sizeof(Contact));
     do{
         printf("\n************ Menu ************\n");
         printf("1. Add a contact to the repertoire.\n");
@@ -212,4 +213,5 @@ void freeContacts(){
         free(Repertoire[i].telephone_number);
         free(Repertoire[i].email);
     }
+    free(Repertoire);
 }
