@@ -20,7 +20,8 @@ void deleteContact();
 void displayContacts();
 void searchContact();
 
-bool checktracker();
+bool isEmpty();
+bool isFull(int nb);
 void clearBuffer();
 void displayContact(Contact contact);
 void freeContacts();
